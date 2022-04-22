@@ -1,0 +1,10 @@
+<h1>応募<h1>
+<div>
+  <%= link_to '新規応募', new_entry_path %>
+</div>
+<div>
+  <%= @entries.each do |entry|%>
+    <%= entry.description %>
+    <%= entry.title %>
+  <% end %>
+</div>
