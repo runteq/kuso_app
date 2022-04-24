@@ -1,13 +1,11 @@
 class EntriesController < ApplicationController
   def index
     @entries = Entry.all
-  end
-  
-  def new
     @entry = Entry.new
   end
 
   def create
+    puts "create"
     @entry = Entry.new(entry_params)
     @entry.save
     redirect_to root_path
@@ -15,6 +13,6 @@ class EntriesController < ApplicationController
   
   private
     def entry_params
-      params.require(:entry).permit(:description,:titel)
+      params.require(:entry).permit(:name,:email,:title,:description,:photo)
     end
 end
