@@ -1,10 +1,26 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">クソアプリweek</a>
+    <a class="navbar-brand" href="#">
+      <%= image_tag 'rantekun.png',class: "d-inline-block align-text-top",style: "width: 60px" %>
+      Powered by RUNTEQ
+    </a>
   </div>
 </nav>
+
+<a class="news-banner" href="ここにリンクを記入">
+  <div class="news-banner__content d-flex align-items-center">
+    <%= image_tag 'rantekun.png',class: "align-text-top",style: "width: 60px" %>
+    <p class="mb-0">Powered by RUNTEQ</p>
+  </div>
+</a>
+
+<div class="news-banner">
+    <div class="news-banner__content">
+      <%= image_tag 'kusoapp_rantekun.png',style: "max-width: 60%;" %>
+  </div>
+</div>
+
 <div class= "text-center">
-  <%= image_tag 'kusoapp_rantekun.png',class: "mx-auto d-block" ,style: "max-width: 60%;" %>
   <div class= "p-5">
     <p>エンジニア経験不問！</p>
     <p>実用性なくてOK！</p>
@@ -18,8 +34,8 @@
   <%= image_tag 'rantekun_t.png',class: "mx-auto d-block" %>
 
   <h2 class= "p-5">お題</h2>
-  <p>4月29日12時からYouTubeライブ配信にて発表</p>
-  <p>発表までお待ち下さい</p>
+  <p>4月29日(金)12時からYouTubeライブ配信にて発表</p>
+  <p>発表までお待ち下さい。</p>
 
 
   <h2 class= "p-5">開催期間・応募期間</h2>
@@ -27,37 +43,41 @@
 
   <h2 class= "p-5">応募方法</h2>
   <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
-  <div class="border">
-    <div class="mb-3 ">
-      <%= form_with model: @entry do |f| %>
-        <label class="form-label">作品タイトル</label>
-        <%= f.text_field :title, class: "form-control" %>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">紹介文</label>
-      <%= f.text_field :description, class: "form-control" %>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">作品イメージ画像</label>
-      <%= f.file_field :photo %>
-    </div>
-      <%= f.submit '作成', class: "btn btn-primary" %>
-      <% end %>
-  </div>
+  <p>※名前とemailは、当選した際ときのみご連絡いたします。</p>
 </div>
+  <div class="container">
+    <div class="border col-md-8 offset-md-2 p-4">
+      <div class="mb-3">
+        <%= form_with model: @entry do |f| %>
+          <label class="form-label">作品タイトル</label>
+          <%= f.text_field :title, class: "form-control rounded-0" %>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">紹介文</label>
+        <%= f.text_field :description, class: "form-control rounded-0" %>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">作品イメージ画像</label>
+        <%= f.file_field :photo %>
+      </div>
+        <%= f.submit '作成', class: "btn btn-light rounded-0" %>
+        <% end %>
+    </div>
+  </div>
 
+  <h2 class= "p-5 text-center">クソアプリ一覧</h2>
   <div class="container">
     <div class="row">
       <% @entries.each do |entry| %>
       <div class="col-6 p-2">
-        <div class="dotted-line rounded-3 p-2">
+        <div class="dotted-line rounded-3 p-4">
           <div class="row">
-            <div class="col-md-4"> 
+            <div class="col-md-6"> 
               <% if entry.photo? %>
                 <%= image_tag entry.photo.url%>
               <% end %>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
             <div class="card-body">
               <div class="card-title">
                 <%= entry.title %> 

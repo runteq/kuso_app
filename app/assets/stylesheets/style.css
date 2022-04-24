@@ -7,12 +7,52 @@
 
 /* オリジナル */
 .dotted-line{
-  border:dashed;
+  border: dashed;
+  border-color:#D48852;
+  background-color: #FFE7D6;
 }
 
+
+/* バナースクロール */
+.news-banner {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* バナー内コンテンツ */
+.news-banner__content {
+  display: inline-block;
+  color: #000;
+  padding-left: 30%;
+  white-space: nowrap;
+  animation: animate-banner 20s linear infinite;
+}
+
+/* バナー内の要素をすべて選択 */
+.news-banner__content > * {
+  display: inline-block;
+}
+
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
 body {
-  background-color: #f2f2f2;
-  font-family: "Lato";
+  background-color: #F5F5F3;
+  font-family: ヒラギノ丸ゴ ProN W4;
   font-weight: 300;
   font-size: 16px;
   color: #555;
@@ -24,7 +64,7 @@ body {
 /* Titles */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway";
+  font-family: ヒラギノ丸ゴ ProN W4;
   font-weight: 300;
   color: #333;
 }
