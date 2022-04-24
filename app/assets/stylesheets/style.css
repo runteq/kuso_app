@@ -5,6 +5,11 @@
 *  License: https://templatemag.com/license/
 */
 
+/* オリジナル */
+.dotted-line{
+  border:dashed;
+}
+
 body {
   background-color: #f2f2f2;
   font-family: "Lato";
