@@ -13,6 +13,6 @@ class EntriesController < ApplicationController
   
   private
     def entry_params
-      params.require(:entry).permit(:title,:description,:photo)
+      params.require(:entry).permit(:name,:email,:title,:description,:photo)
     end
 end
