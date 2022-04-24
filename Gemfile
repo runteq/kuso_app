@@ -46,6 +46,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
