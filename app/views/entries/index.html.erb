@@ -30,17 +30,26 @@
   <p>お題にふさわしいアプリを作った10名様にプレゼントいたします！</p>
   <%= image_tag 'rantekun_t.png',class: "mx-auto d-block box" %>
 
-  <h2 class= "p-5">お題</h2>
+  <div class="d-flex align-items-center justify-content-center">
+    <%= image_tag 'normal_rantekun.png',class: "align-text-top ",style: "max-width: 5%" %>
+    <h2 class= "p-4 mb-0">お題</h2>
+  </div>
   <p>4月29日(金)12時からYouTubeライブ配信にて発表</p>
   <p>発表までお待ち下さい。</p>
 
 
-  <h2 class= "p-5">開催期間・応募期間</h2>
+  <h2 class= "p-5 shiny-btn">開催期間・応募期間</h2>
   <p>4月29日(金)〜5月6日(金)23時59分締め切り</p>
+
+  <h2 class= "p-5">応募条件</h2>
+  <p>デプロイされていて誰でも使える状態であること</p>
+  <p>お題にそった作品になっていること</p>
+  <p>1人何作品でも応募OK</p>
 
   <h2 class= "p-5">応募方法</h2>
   <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
   <p>※名前とメールアドレスは、当選した際のみ使用いたします。</p>
+  </div>
 </div>
   <div class="container">
     <div class="border col-md-8 offset-md-2 p-4">
@@ -65,7 +74,7 @@
         <label class="form-label">作品イメージ画像</label>
         <%= f.file_field :photo %>
       </div>
-        <%= f.submit '作成', class: "btn btn-light rounded-0" %>
+        <%= f.submit '作成', class: "btn btn-light rounded-0 " %>
         <% end %>
     </div>
   </div>
