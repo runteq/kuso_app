@@ -63,7 +63,24 @@
   }
 }
 
+/* 背景 */
 
+.haikei {
+  background: 
+    radial-gradient(#fc7400 3px, transparent 4px),
+    radial-gradient(#fc7400 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #FFE7D6 75px, #FFE7D6 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #FFE7D6 76px, #FFE7D6 77px, transparent 78px, transparent 109px),
+  #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.background{
+  padding:30px;
+  background-color: rgba(255, 255, 255,1);
+}
 
 body {
   background-color: #F5F5F3;

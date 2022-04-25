@@ -16,43 +16,60 @@
       </div>
     </div> 
 
-<div class= "text-center">
-  <div class= "p-5">
-    <div>
-    <p>エンジニア経験不問！</p>
-    <p>実用性なくてOK！</p>
-    <p>とりあえず動けばOK！</p>
-    <p>みんなで楽しくクソアプリを作ろう！</p>
-  </div>
-
-  <h2 class= "p-5"> 景品</h2>
-  <p>RUNTEQキャリアトレーナー茂木さん執筆のらんてくんをTシャツにしちゃいました！</p>
-  <p>お題にふさわしいアプリを作った10名様にプレゼントいたします！</p>
-  <%= image_tag 'rantekun_t.png',class: "mx-auto d-block box" %>
-
-  <div class="d-flex align-items-center justify-content-center">
-    <%= image_tag 'normal_rantekun.png',class: "align-text-top ",style: "max-width: 5%" %>
-    <h2 class= "p-4 mb-0">お題</h2>
-  </div>
-  <p>4月29日(金)12時からYouTubeライブ配信にて発表</p>
-  <p>発表までお待ち下さい。</p>
-
-
-  <h2 class= "p-5 shiny-btn">開催期間・応募期間</h2>
-  <p>4月29日(金)〜5月6日(金)23時59分締め切り</p>
-
-  <h2 class= "p-5">応募条件</h2>
-  <p>デプロイされていて誰でも使える状態であること</p>
-  <p>お題にそった作品になっていること</p>
-  <p>1人何作品でも応募OK</p>
-
-  <h2 class= "p-5">応募方法</h2>
-  <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
-  <p>※名前とメールアドレスは、当選した際のみ使用いたします。</p>
+<div class="haikei p-5">
+<div class="container">
+  <div class= "text-center">
+    <div class= "p-5">
+      <p>エンジニア経験不問！</p>
+      <p>実用性なくてOK！</p>
+      <p>とりあえず動けばOK！</p>
+      <p>みんなで楽しくクソアプリを作ろう！</p>
+    </div>
   </div>
 </div>
+<div class="container">
+  <div class= "text-center">
+    <h2 class= "p-5"> 景品</h2>
+    <p>RUNTEQキャリアトレーナー茂木さん執筆のらんてくんをTシャツにしちゃいました！</p>
+    <p>お題にふさわしいアプリを作った10名様にプレゼントいたします！</p>
+    <%= image_tag 'rantekun_t.png',class: "mx-auto d-block box" %>
+  </div>
+</div>
+<div class="container">
+  <div class= "text-center p-5">
+    <div class="d-flex align-items-center justify-content-center">
+      <%= image_tag 'normal_rantekun.png',class: "align-text-top ",style: "max-width: 5%" %>
+      <h2 class= "p-4 mb-0">お題</h2>
+    </div>
+    <p>4月29日(金)12時からYouTubeライブ配信にて発表</p>
+    <p>発表までお待ち下さい。</p>
+  </div>
+</div>
+<div class="container">
+  <div class= "text-center">
+    <h2>開催期間・応募期間</h2>
+    <p>4月29日(金)〜5月6日(金)23時59分締め切り</p>
+  </div>
+</div>
+<div class="container">
+  <div class= "text-center">
+    <h2 class= "p-5">応募条件</h2>
+    <p>デプロイされていて誰でも使える状態であること</p>
+    <p>お題にそった作品になっていること</p>
+    <p>1人何作品でも応募OK</p>
+  </div>
+</div>
+
+<div class="container ">
+  <div class= "text-center">
+    <h2 class= "p-5">応募方法</h2>
+    <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
+    <p>※名前とメールアドレスは、当選した際のみ使用いたします。</p>
+  </div>
+</div>
+
   <div class="container">
-    <div class="border col-md-8 offset-md-2 p-4">
+    <div class="border col-md-8 offset-md-2 p-4 background">
       <%= form_with model: @entry do |f| %>
       <div class="mb-3">
           <label class="form-label">お名前</label>
@@ -107,3 +124,4 @@
       <% end %>
     </div>
   </div>
+</div>
