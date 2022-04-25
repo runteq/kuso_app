@@ -29,7 +29,7 @@
 </div>
 <div class="container">
   <div class= "text-center">
-    <h2 class= "p-5"> 景品</h2>
+    <%= image_tag 'keihin.png',class: "mx-auto d-block p-5", style: "max-width: 30%;" %>
     <p>RUNTEQキャリアトレーナー茂木さん執筆のらんてくんをTシャツにしちゃいました！</p>
     <p>お題にふさわしいアプリを作った10名様にプレゼントいたします！</p>
     <%= image_tag 'rantekun_t.png',class: "mx-auto d-block box" %>
@@ -47,13 +47,13 @@
 </div>
 <div class="container">
   <div class= "text-center">
-    <h2>開催期間・応募期間</h2>
+    <%= image_tag 'kikan.png',class: "align-text-top p-5",style: "max-width: 40%" %>
     <p>4月29日(金)〜5月6日(金)23時59分締め切り</p>
   </div>
 </div>
 <div class="container">
   <div class= "text-center">
-    <h2 class= "p-5">応募条件</h2>
+    <%= image_tag 'jyouken.png',class: "align-text-top p-5",style: "max-width: 30%" %>
     <p>デプロイされていて誰でも使える状態であること</p>
     <p>お題にそった作品になっていること</p>
     <p>1人何作品でも応募OK</p>
@@ -62,7 +62,7 @@
 
 <div class="container ">
   <div class= "text-center">
-    <h2 class= "p-5">応募方法</h2>
+    <%= image_tag 'houhou.png',class: "align-text-top p-5",style: "max-width: 30%" %>
     <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
     <p>※名前とメールアドレスは、当選した際のみ使用いたします。</p>
   </div>
@@ -96,8 +96,7 @@
     </div>
   </div>
 
-  <h2 class= "p-5 text-center">クソアプリ一覧</h2>
-  <%= image_tag 'kusoapp_full.png',class: "mx-auto d-block", style: "max-width: 60%;" %>
+  <%= image_tag 'kusoapp_full.png',class: "mx-auto d-block p-5", style: "max-width: 50%;" %>
   <div class="container">
     <div class="row">
       <% @entries.each do |entry| %>
