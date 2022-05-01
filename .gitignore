@@ -6,10 +6,14 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
+/db/*.sqlite3-journal
 /db/*.sqlite3-*
+
+config/database.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -17,24 +21,52 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+# sitemap
+public/sitemap.xml.gz
+
+# RubyMine
+.idea/
 
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+public/uploads
+public/uploaders
 
 /public/assets
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/app/assets/builds/*
-!/app/assets/builds/.keep
-
+/public/packs
+/public/packs-test
 /node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+*.swp
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# docker
+docker-compose.yml
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+/config/credentials/test.key
+/config/credentials/staging.key
+
+dump.rdb
+
+/config/credentials/production.key
+
+.env

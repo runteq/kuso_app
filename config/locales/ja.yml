@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      entry: 応募
+    attributes:
+      entry:
+        name: お名前
+        email: メールアドレス
+        title: 作品タイトル
+        description: 紹介文
+        photo: 作品イメージ画像
+
+
