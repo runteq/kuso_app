@@ -46,6 +46,7 @@ gem "bootsnap", require: false
 
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+gem 'meta-tags'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
