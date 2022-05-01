@@ -1,0 +1,15 @@
+<%= turbo_stream.replace "new_entry" do %>
+  <div class="border col-md-8 offset-md-2 p-4 background" id="new_entry">
+  <%= form_with model: @entry do |f| %>
+    <%= render partial: "form", locals: { f: f } %>
+  <% end %>
+  </div>
+<% end %>
+
+<%= turbo_stream.replace "entries" do %>
+  <div class="row" id="entries">
+    <% @entries.each do |entry| %>
+      <%= render partial: "entry", locals: { entry: entry } %>
+    <% end %>
+  </div>
+<% end %>
