@@ -1,19 +1,17 @@
 <div class="col-6 p-2">
   <div class="dotted-line rounded-3 p-4">
-    <div class="row">
-      <div class="col-md-6"> 
+    <div class="card">
+      <div class="card-img-top"> 
         <% if entry.photo? %>
           <%= image_tag entry.photo.url%>
         <% end %>
       </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <div class="card-title">
-            <%= entry.title %> 
-          </div>
-          <div class="card-text">
-            <%= entry.description %>
-          </div>
+      <div class="card-header">
+        <h5 class="card-title"><%= entry.title %> </h5>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <%= raw text_url_to_link(simple_format entry.description) %>
         </div>
       </div>
     </div>

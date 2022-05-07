@@ -34,4 +34,9 @@ module ApplicationHelper
     errors = obj.errors[method.to_sym]
     tag.div("#{prepend_text}#{errors.first}", class: css_class) if errors.is_a?(Array) && !errors.empty?
   end
+
+  def text_url_to_link(text)
+    uri_reg = URI.regexp(%w[http https])
+    text.gsub(uri_reg) {"<a href='#{$&}' target='_blank'\>#{$&}</a>"}
+  end
 end
