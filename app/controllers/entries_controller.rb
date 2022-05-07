@@ -1,8 +1,6 @@
 class EntriesController < ApplicationController
   def index
-    p ENV['AWS_S3_ACCESS_KEY']
-    p ENV['AWS_S3_SECRET_ACCESS_KEY']
-    @entries = Entry.all
+    @entries = Entry.all.order(created_at: :desc)
     @entry = Entry.new
   end
 
