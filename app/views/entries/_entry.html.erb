@@ -1,11 +1,9 @@
 <div class="col-6 p-2">
   <div class="dotted-line rounded-3 p-4">
     <div class="card">
-      <div class="card-img-top"> 
-        <% if entry.photo? %>
-          <%= image_tag entry.photo.url%>
-        <% end %>
-      </div>
+      <% if entry.photo? %>
+        <%= image_tag entry.photo.url class: 'card-img-top' %>
+      <% end %>
       <div class="card-header">
         <h5 class="card-title"><%= entry.title %> </h5>
       </div>
