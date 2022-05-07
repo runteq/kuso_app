@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
   def index
-    @entries = Entry.all.order(created_at: :desc)
+    @entries = Entry.all.order(created_at: :asc)
     @entry = Entry.new
   end
 
