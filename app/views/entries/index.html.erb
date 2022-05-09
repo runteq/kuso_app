@@ -63,18 +63,9 @@
 <div class="container ">
   <div class= "text-center">
     <%= image_tag 'houhou.png',class: "align-text-top p-5",style: "max-width: 30%" %>
-    <p>下記フォームより必要情報をご記入し、ご応募ください。</p>
-    <p>※名前とメールアドレスは、当選した際のみ使用いたします。</p>
+    <p>ご応募期間は終了しました。 たくさんのご応募ありがとうございました。</p>
   </div>
 </div>
-
-  <div class="container">
-    <div class="border col-md-8 offset-md-2 p-4 background" id="new_entry">
-      <%= form_with model: @entry do |f| %>
-        <%= render partial: "form", locals: { f: f } %>
-      <% end %>
-    </div>
-  </div>
 
   <%= image_tag 'kusoapp_full.png',class: "mx-auto d-block p-5", style: "max-width: 50%;" %>
   <div class="container">
